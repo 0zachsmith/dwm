@@ -125,7 +125,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ 0,                            XK_Print,  spawn,          {.v = screenshot } },
+  { 0,                            XK_Print,  spawn,          {.v = screenshot } },
 	{ MODKEY|ControlMask,		        XK_comma,  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, cyclelayout,    {.i = +1 } },
 	TAGKEYS(                        XK_1,                      0)
@@ -138,6 +138,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	{ MODKEY|ControlMask,           XK_q,      spawn,          SHCMD("systemctl suspend") },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("xscreensaver-command -l") },
 };
 
